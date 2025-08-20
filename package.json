@@ -1,13 +1,19 @@
 {
   "name": "stock-market-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-  "start": "node server/index.js",
-  "server": "nodemon server/index.js",
-  "client": "npm run start --prefix client",
-  "dev": "concurrently \"npm run server\" \"npm run client\""
-},
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sudeepgowda843-design/stock-market-app.git"
@@ -19,13 +25,5 @@
     "url": "https://github.com/sudeepgowda843-design/stock-market-app/issues"
   },
   "homepage": "https://github.com/sudeepgowda843-design/stock-market-app#readme",
-  "description": "",
-  "devDependencies": {
-    "@craco/craco": "^5.9.0",
-    "autoprefixer": "^10.4.21",
-    "concurrently": "^9.2.0",
-    "nodemon": "^3.1.10",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12"
-  }
+  "description": ""
 }
